@@ -1,9 +1,9 @@
 :root {
-  --bgColor: black;
+  --bgColor: #FF5F1F;
   --lines: 500;
   --lineHeight: 2rem;
   --timePerLine: 4s;
-  --widthCh: 30;
+  --widthCh: 40;
   --width: calc(var(--widthCh) * 1ch);
   --time: calc(var(--lines) * var(--timePerLine));
 }
@@ -19,7 +19,7 @@
 }
 
 @keyframes caret {
-  0%, 100% { color: #FF5F1F; }
+  0%, 100% { color: white; }
   50% { color: transparent; }
 }
 

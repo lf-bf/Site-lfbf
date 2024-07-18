@@ -58,7 +58,7 @@ a, button, label {
 }
 
 .navbar .dropdown-content {
-  background: rgba(255, 255, 255, 0.029);
+  background: rgba(255, 255, 255, 0.119);
   backdrop-filter: blur(30px);
   border-radius: 25px;
   display: none;
@@ -146,6 +146,9 @@ button {
 .navbar .logo a {
   transition: 0.35s ease;
 }
+.logo a.link::before{
+  height: 4px;
+}
 
 ul {
   display: flex;
@@ -192,17 +195,24 @@ section > h1 {
   align-items: flex-start; /* Alinha itens à esquerda */
   text-align: left;
   justify-content: flex-start;
+  background-color: rgba(245, 245, 245, 0.816);
+  border-radius: 40px;
+  
 }
 .sobre{
   display: flex;
     flex-direction: column;
     color: #fff;
+    background-color: #ff5f1f;
+    border-radius: 40px;
     font-family: monospace;
-    margin: 20px 50px; /* Ajuste de margem */
-    width: 550px;
+    margin: 40px 50px; /* Ajuste de margem */
+    padding: 40px 70px;
+    width: 900px;
     height: fit-content; /* Ajuste de altura */
     align-items: flex-start; /* Alinha itens à esquerda */
     text-align: left;
+    box-shadow: 0 8px 40px 0 rgba(0, 0, 0, 0.37) ;
 }
 
 .sobre a, h1{
@@ -210,6 +220,7 @@ section > h1 {
 }
 .sobre a.link::before{
   height: 4px;
+  background: white;
 }
 .sobre h1 {
   font-size: 80px;
