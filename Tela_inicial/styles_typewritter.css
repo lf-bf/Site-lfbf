@@ -1,0 +1,61 @@
+:root {
+  --bgColor: black;
+  --lines: 500;
+  --lineHeight: 2rem;
+  --timePerLine: 4s;
+  --widthCh: 30;
+  --width: calc(var(--widthCh) * 1ch);
+  --time: calc(var(--lines) * var(--timePerLine));
+}
+
+@keyframes grow {
+  0% { max-height: var(--lineHeight); }
+  100% { max-height: calc(var(--lineHeight) * var(--lines)); }
+}
+
+@keyframes type {
+  0% { width: 100%; }
+  100% { width: 0%; }
+}
+
+@keyframes caret {
+  0%, 100% { color: #FF5F1F; }
+  50% { color: transparent; }
+}
+
+.typewriter {
+  animation: grow var(--time) steps(var(--lines));
+  animation-fill-mode: forwards;
+  background: var(--bgColor);  
+  line-height: var(--lineHeight);
+  max-height: var(--lineHeight);
+  overflow: hidden;
+  position: relative;
+  width: var(--width);
+  font-size: 30px;
+  font-weight: 300;
+  text-align: justify;
+  text-wrap: balance;
+}
+
+.typewriter::before {
+  content: "";
+  animation: 
+    type var(--timePerLine) steps(var(--widthCh)) infinite, 
+    caret 0.5s steps(1) infinite;
+  animation-iteration-count: 4;
+  background: var(--bgColor);
+  border-left: 2px solid;
+  bottom: 0;
+  height: 2rem;
+  position: absolute;
+  right: 0;
+  width: 100%;
+  animation-fill-mode: forwards;
+}
+
+mark{
+  color: white;
+  background-color: #FF5F1F;
+  
+}

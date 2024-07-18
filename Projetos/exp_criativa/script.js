@@ -76,4 +76,30 @@ headers.forEach((head) => {
   });
 });
 
+//efeito typewritter
 
+const textElement = document.getElementById('text');
+const text = textElement.innerText;
+textElement.innerText = '';
+const lines = text.split('\n');
+
+let currentLine = 0;
+let currentChar = 0;
+
+function typeLine() {
+  if (currentLine < lines.length) {
+    let line = lines[currentLine];
+    if (currentChar < line.length) {
+      textElement.innerText += line[currentChar];
+      currentChar++;
+      setTimeout(typeLine, 100); // Adjust the speed as necessary
+    } else {
+      textElement.innerText += '\n';
+      currentChar = 0;
+      currentLine++;
+      setTimeout(typeLine, 100); // Adjust the speed as necessary
+    }
+  }
+}
+
+typeLine();
