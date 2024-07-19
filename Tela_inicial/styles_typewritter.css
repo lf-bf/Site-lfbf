@@ -31,7 +31,7 @@
   max-height: var(--lineHeight);
   overflow: hidden;
   position: relative;
-  width: var(--width);
+  width: 100%;
   font-size: 30px;
   font-weight: 300;
   text-align: justify;
