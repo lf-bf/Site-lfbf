@@ -105,7 +105,6 @@ a, button, label {
   font-size: 18px;
   padding: 0.5rem;
   position: relative;
-
 }
 
 .link::before {
@@ -167,11 +166,6 @@ ul {
   width: 100%; 
 }
 
-
-.link:hover {
-  transform: scaleX(1);
-}
-
 .inicio {
   height: 100vh;
   display: flex;
@@ -210,7 +204,6 @@ ul {
     text-align: left;
     align-items: flex-start; /* Alinha itens à esquerda */
     justify-content: flex-start;
-    flex-wrap: wrap
 }
 .sobre, .sobre2{
     display:flexbox;
@@ -236,8 +229,6 @@ ul {
   cursor: pointer;
 }
 
-
-
 .sobre2{
   background-color: rgba(7, 7, 7, 0.816);
   margin-top: 20px;
@@ -252,6 +243,8 @@ ul {
   height: 4px;
   background: white;
   width: 500px;
+  flex-direction: row;
+  align-content: end;
 }
 .sobre2 a.link::before{
   height: 4px;

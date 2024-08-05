@@ -1,16 +1,8 @@
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
 body{
   background-color: black;
-  height: 200vh; 
+  height: 100%; 
   width: 100%;
-  overflow-x: hidden; 
- 
+  margin: 40px 40px;
 }
 
 .cursor {
@@ -173,14 +165,13 @@ ul {
 }
 
 .conteudo {
-  display:inline-flex;
+  display:flex;
   position: relative;
   color: #fff;
   background-color:rgba(245, 245, 245, 0.784);
   border-radius: 80px;
   font-family: monospace;
-  margin: 50px 50px; /* Ajuste de margem */
-  width: auto;
+  width: inherit;
   height: 50%;
 
 }
@@ -193,7 +184,7 @@ ul {
     width: auto;
 }
 .sobre, .sobre2{
-    display:inline;
+    display:inline-flex;
     color: #fff;
     background-color: #ff5f1f;
     border-radius: 80px;
