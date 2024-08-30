@@ -183,11 +183,12 @@ ul {
     position: relative;
     flex-direction:column;
     margin: 70px 70px; /* Ajuste de margem */
-    height: 84%; /* Ajuste de altura */
+    height: 70%; /* Ajuste de altura */
     width: 50%;
 }
 .sobre{
     display: flex;
+    position: static;
     flex-direction: column;
     color: #fff;
     background-color: #ff5f1f;
@@ -195,7 +196,7 @@ ul {
     font-family: monospace;
     padding: 40px 70px;
     margin-bottom: 60px;
-    width: 80%;
+    width: fit-content;
     height: 50%; /* Ajuste de altura */
     text-align: left;
     box-shadow: 0 8px 40px 0 rgba(0, 0, 0, 0.37) ;
@@ -203,13 +204,14 @@ ul {
 }
 .sobre2{
     display: flex;
+    position: static;
     flex-direction: column;
     color: #fff;
     background-color: rgba(7, 7, 7, 0.816);
     border-radius: 80px;
     font-family: monospace;
     padding: 40px 70px;
-    width: 80%;
+    width: 20vmin; /* O PROBLEMA*/
     height: 50%; /* Ajuste de altura */
     text-align: left;
     box-shadow: 0 8px 40px 0 rgba(0, 0, 0, 0.37) ;
@@ -226,27 +228,26 @@ ul {
 
 .sobre2 a.link{
   width: auto;
-  height: 100px;
 }
-.sobre a.link, h1{
-  width: 500px;
-  height: 100px;
+.sobre a.link{
+  width: auto;
 }
 .sobre a.link::before{
   height: 4px;
   background: white;
-  width: 500px;
+ 
 }
 .sobre2 a.link::before{
   height: 4px;
   background: white;
-  width: 500px;
+
 }
 .sobre h1 {
   font-size: 80px;
   font-weight: 700;
   text-wrap: balance;
   margin: 0; /* Remove margem */
+  width: auto;
 }
 .sobre2 h1 {
   font-size: 80px;
@@ -334,7 +335,7 @@ label{
 }
 
 /* Responsive adjustments */
-@media (max-width: 1024px) {
+@media (max-width: 350px) {
   .navbar {
     flex-direction: column;
     height: auto;
@@ -349,18 +350,20 @@ label{
   .conteudo {
     flex-direction: column;
     margin: 20px 10px;
-    width: 500px;
+    width: auto;
   }
   .container {
-    width: 90%;
-    margin: 20px 10px;
+    width: auto;
+    margin: 70px 70px;
   }
   .sobre, .sobre2 {
     padding: 20px 30px;
     margin-bottom: 10px;
+    width: fit-content;
   }
   .sobre h1, .sobre2 h1 {
     font-size: 40px;
+    width: fit-content;
   }
   .label, .label2 {
     font-size: 18px;
