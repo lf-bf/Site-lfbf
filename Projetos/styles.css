@@ -1,6 +1,6 @@
 body{
   background-color: black;
-  height: 200vh;
+  height: 150vmax;
   width: auto;
   margin: 40px 40px;
   overflow-x: hidden;
@@ -173,9 +173,9 @@ ul {
   background-color:rgba(245, 245, 245, 0.784);
   border-radius: 80px;
   font-family: monospace;
-  margin-top: 5%;
+  margin-top: 10%;
   width: inherit;
-  height: 60%;
+  height: fit-content;
 
 }
 .container{
@@ -183,12 +183,11 @@ ul {
     position: relative;
     flex-direction:column;
     margin: 70px 70px; /* Ajuste de margem */
-    height: 70%; /* Ajuste de altura */
+    height: fit-content; /* Ajuste de altura */
     width: 50%;
 }
 .sobre{
     display: flex;
-    position: static;
     flex-direction: column;
     color: #fff;
     background-color: #ff5f1f;
@@ -196,7 +195,7 @@ ul {
     font-family: monospace;
     padding: 40px 70px;
     margin-bottom: 60px;
-    width: fit-content;
+    width: auto;
     height: 50%; /* Ajuste de altura */
     text-align: left;
     box-shadow: 0 8px 40px 0 rgba(0, 0, 0, 0.37) ;
@@ -204,14 +203,13 @@ ul {
 }
 .sobre2{
     display: flex;
-    position: static;
     flex-direction: column;
     color: #fff;
     background-color: rgba(7, 7, 7, 0.816);
     border-radius: 80px;
     font-family: monospace;
     padding: 40px 70px;
-    width: 20vmin; /* O PROBLEMA*/
+    width: auto; /* O PROBLEMA*/
     height: 50%; /* Ajuste de altura */
     text-align: left;
     box-shadow: 0 8px 40px 0 rgba(0, 0, 0, 0.37) ;
@@ -250,7 +248,7 @@ ul {
   width: auto;
 }
 .sobre2 h1 {
-  font-size: 80px;
+  font-size: 3vmax; /*Problema*/
   font-weight: 700;
   text-wrap: balance;
   margin: 0; /* Remove margem */
@@ -335,7 +333,10 @@ label{
 }
 
 /* Responsive adjustments */
-@media (max-width: 350px) {
+@media (max-width: 450px) {
+  body {
+    margin: 10px 10px;
+  }
   .navbar {
     flex-direction: column;
     height: auto;
@@ -345,20 +346,26 @@ label{
   }
   .navbar ul {
     flex-direction: column;
-    gap: 0.5rem;
+
   }
   .conteudo {
     flex-direction: column;
     margin: 20px 10px;
+    margin-top: 70px;
     width: auto;
+    border-radius: 50px;
+    padding: 10px 10px;
+    height: auto;
   }
   .container {
     width: auto;
-    margin: 70px 70px;
+    margin: 5px 5px;
+    padding: 10px 10px;
   }
   .sobre, .sobre2 {
     padding: 20px 30px;
     margin-bottom: 10px;
+    border-radius: 40px;
     width: fit-content;
   }
   .sobre h1, .sobre2 h1 {
