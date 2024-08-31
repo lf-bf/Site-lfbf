@@ -1,0 +1,105 @@
+@font-face {
+    font-family: "Corporate";
+    src: url('CorporateS-Regular.otf');
+}
+
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(210, 208, 208, 0.633);
+    overflow-x: hidden;
+    height: auto;
+    width: auto;
+}
+
+.conteudo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 45vmax;
+    height: auto;
+    margin: 30px 30px;
+
+}
+
+.botao_voltar{
+    display: flex;
+    flex-direction: inherit;
+    position: fixed;
+    z-index: 30;
+    align-items: flex-start;
+    width: inherit;
+    padding: 20px 20px;
+    background: rgba(172, 170, 170, 0.452);
+    border-radius: 80px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.37);
+    backdrop-filter: blur(17.5px);
+    
+}
+.botao_voltar button{
+    border: 0;
+    border-radius: 35px;
+    background-color:  #FF5F1F;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    width: 10svh;
+    line-height: 1.5;
+    font-weight: 700;
+    font-size: 2svh; /* Cria uma responsividade legal*/
+    padding: 10px 10px;
+    transition: all .7s ease;
+}
+/*animação do botão*/
+    
+.botao_voltar button:hover {
+    transform: translate3D(0,-1px,0) scale(1.20); /* move up slightly and zoom in */
+    box-shadow: 8px 28px 50px rgba(39,44,49,.07), 1px 6px 12px rgba(39,44,49,.04);
+    transition: all .7s ease; /* zoom in */
+    cursor: pointer;
+  }
+
+.corpo{
+    display: flex;
+    position: relative;
+    flex-direction: inherit;
+    width: 40vmax;
+    padding: 20px 40px;
+    margin-top: 120px;
+    background: #FF5F1F;
+    border-radius: 80px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.37);
+    backdrop-filter: blur(17.5px);
+}
+.corpo h1{
+    text-align: start;
+    font-family: monospace;
+    font-size: 5svh;
+    font-weight: 700;
+    color: rgb(252, 248, 248);
+    text-wrap: balance;
+
+}
+.corpo img{
+    margin-top: 50px;
+    width: inherit;
+    border-radius: 60px;
+    object-fit: cover;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.37);
+    backdrop-filter: blur(17.5px);
+}
+
+.corpo p{
+    text-align: justify;
+    font-family: 'Corporate';
+    font-size: 2.0svh;
+    line-height: 4svh;
+    word-spacing: 1px;
+    color: rgb(252, 248, 248);
+    text-wrap: balance;
+}
