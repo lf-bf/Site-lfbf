@@ -183,30 +183,27 @@ ul {
   text-wrap: balance;
 }
 .conteudo {
-  display:inline-flex;
+  display:flex;
   color: #fff;
+  flex-direction: row-reverse;
   background-color:rgba(245, 245, 245, 0.784);
   border-radius: 80px;
   font-family: monospace;
-  margin: 50px 50px; /* Ajuste de margem */
+  margin: 50px 50px;
+  padding: 70px 70px; /* Ajuste de margem */
   width: auto;
   height: 1200px;
   
-
 }
 .container{
     display: flex;
     position: relative;
     flex-direction:column;
-    margin: 70px 70px; /* Ajuste de margem */
     width: 50%;
     height: auto; /* Ajuste de altura */
-    text-align: left;
-    align-items: flex-start; /* Alinha itens à esquerda */
-    justify-content: flex-start;
 }
 .sobre, .sobre2{
-    display:flexbox;
+    display:flex;
     color: #fff;
     background-color: #ff5f1f;
     border-radius: 80px;
@@ -215,9 +212,9 @@ ul {
     margin-bottom: 20px;
     width: 100%;
     height: 40%; /* Ajuste de altura */
-    text-align: left;
     box-shadow: 0 8px 40px 0 rgba(0, 0, 0, 0.37) ;
     transition: all .5s ease; 
+    flex-direction: column;
     
 /*animação do card*/
     
@@ -229,40 +226,36 @@ ul {
   cursor: pointer;
 }
 
-.sobre2{
-  background-color: rgba(7, 7, 7, 0.816);
-  margin-top: 20px;
+.sobre2 a.link{
+  width: auto;
 }
-.sobre2 a, h1{
-  width: 500px;
-}
-.sobre a, h1{
-  width: 500px;
+.sobre a.link{
+  width: auto;
 }
 .sobre a.link::before{
   height: 4px;
   background: white;
-  width: 500px;
-  flex-direction: row;
-  align-content: end;
+ 
 }
 .sobre2 a.link::before{
   height: 4px;
   background: white;
-  width: 500px;
+
 }
 .sobre h1 {
   font-size: 80px;
   font-weight: 700;
   text-wrap: balance;
   margin: 0; /* Remove margem */
+  width: auto;
 }
 .sobre2 h1 {
-  font-size: 80px;
+  font-size: 3vmax; /*Problema*/
   font-weight: 700;
   text-wrap: balance;
   margin: 0; /* Remove margem */
 }
+
 .fundo_foto{
   display: flex;
   height: 50%; 
