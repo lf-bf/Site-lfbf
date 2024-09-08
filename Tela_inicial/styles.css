@@ -29,6 +29,7 @@ body{
   overflow-x: hidden;
   height: auto;
   width: auto;
+  margin: 10;
 }
 
 .cursor {
@@ -56,7 +57,7 @@ a, button, label {
 
 .navbar {
   position: fixed;
-  margin-top: 30px;
+  margin-top: 60px;
   width: 80svw; /*ajustar de acordo com width*/
   height: 110px;
   padding: 20px 30px;
@@ -104,7 +105,10 @@ a, button, label {
 .navbar .dropdown {
   position:relative;
   z-index: 30;
-  
+}
+
+.dropdown a.link{
+  text-align: center;
 }
 
 .navbar .dropdown-content {
@@ -143,7 +147,7 @@ a, button, label {
   text-decoration: none;
   color: #fff;
   font-size: 18px;
-  padding: 0.5rem;
+  padding-bottom: 10px;
   position: relative;
 }
 
@@ -351,4 +355,20 @@ label{
   font-size: 35px;
   font-weight: 700;
   margin: 30px 30px;
+}
+
+@media (max-width: 450px){
+  .dropdown a.link{
+    font-size: 13px;
+  }
+  .navbar{
+    height: 90px;
+  }
+  .navbar .logo{
+    height: 50px;
+    width: 120px;
+  }
+  .corpo img{
+    height: auto;
+  }
 }

@@ -56,6 +56,7 @@ a, button, label {
   width: 80svw; /*ajustar de acordo com width*/
   height: 110px;
   padding: 20px 30px;
+  margin-top: 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -139,8 +140,8 @@ a, button, label {
   text-decoration: none;
   color: #fff;
   font-size: 18px;
-  padding: 0.5rem;
   position: relative;
+  padding-bottom: 10px;
 
 }
 
@@ -201,7 +202,7 @@ ul {
   border-radius: 80px;
   font-family: monospace;
   margin-top: 10%;
-  width: inherit;
+  width: 80svw;
   height: fit-content;
 
 }
@@ -371,6 +372,16 @@ label{
 @media (max-width: 450px) {
   body {
     margin: 10px 10px;
+  }
+  .dropdown a.link{
+    font-size: 13px;
+  }
+  .navbar{
+    height: 90px;
+  }
+  .navbar .logo{
+    height: 50px;
+    width: 110px;
   }
   .conteudo {
     flex-direction: column;
