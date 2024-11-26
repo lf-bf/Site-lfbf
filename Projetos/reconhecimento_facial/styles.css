@@ -69,7 +69,6 @@ body{
 
 .corpo{
     display: flex;
-    position: relative;
     flex-direction: column;
     width: 40vmax;
     padding: 50px 50px;
@@ -78,6 +77,16 @@ body{
     border-radius: 80px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.37);
     backdrop-filter: blur(17.5px);
+}
+
+.corpo i{
+    font-size: 60px;
+    color: white;
+    transition: all .7s ease;
+}
+.corpo a{
+    text-decoration: none;
+    width: 60px;
 }
 .corpo h1{
     text-align: start;
@@ -118,14 +127,17 @@ body{
         width: 35vmax;
     }
     .corpo{
-        padding: 40px 40px;
-        width: 35vmax;
+        padding: 40px 30px;
+        width: 37vmax;
     }
     .corpo h1{
         font-size: 8vw;
     }
     .corpo img{
-        margin: 0;
         height: 300px;
+    }
+    .corpo p{
+        font-size: 20px;
+
     }
   }

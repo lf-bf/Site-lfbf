@@ -196,35 +196,33 @@ ul {
 
 .conteudo {
   display:flex;
-  position: relative;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  padding: 30px 20px;
+  flex-wrap: wrap;
   color: #fff;
   background-color:rgba(245, 245, 245, 0.784);
   border-radius: 80px;
   font-family: monospace;
-  margin-top: 10%;
-  width: 80svw;
-  height: fit-content;
+  margin-top: 200px;
+  width: 70%;
+  height: auto;
 
 }
-.container{
-    display: flex;
-    position: relative;
-    flex-direction:column;
-    margin: 70px 70px; /* Ajuste de margem */
-    height: fit-content; /* Ajuste de altura */
-    width: 50%;
-}
+
 .sobre{
     display: flex;
     flex-direction: column;
     color: #fff;
     background-color: #ff5f1f;
-    border-radius: 80px;
+    border-radius: 60px;
     font-family: monospace;
-    padding: 40px 70px;
-    margin-bottom: 60px;
-    width: auto;
-    height: 50%; /* Ajuste de altura */
+    padding: 40px 40px;
+    margin: 20px;
+    width: 45%;
+    height: 300px; /* Ajuste de altura */
     text-align: left;
     box-shadow: 0 8px 40px 0 rgba(0, 0, 0, 0.37) ;
     transition: all .5s ease; 
@@ -234,7 +232,7 @@ ul {
     flex-direction: column;
     color: #fff;
     background-color: rgba(7, 7, 7, 0.816);
-    border-radius: 80px;
+    border-radius: 60px;
     font-family: monospace;
     padding: 40px 70px;
     width: auto; /* O PROBLEMA*/
@@ -269,7 +267,6 @@ ul {
 
 }
 .sobre h1 {
-  font-size: 80px;
   font-weight: 700;
   text-wrap: balance;
   margin: 0; /* Remove margem */
@@ -385,7 +382,8 @@ label{
   }
   .conteudo {
     flex-direction: column;
-    margin: 20px 10px;
+    flex-wrap: nowrap;
+    margin: 50px 10px;
     margin-top: 70px;
     width: auto;
     border-radius: 50px;
