@@ -396,13 +396,12 @@ label{
     padding: 10px 10px;
   }
   .sobre, .sobre2 {
-    padding: 20px 30px;
     margin-bottom: 10px;
     border-radius: 40px;
-    width: fit-content;
+    width: 35vmax;
   }
   .sobre h1, .sobre2 h1 {
-    font-size: 40px;
+    font-size: 30px;
     width: fit-content;
   }
 }
