@@ -28,8 +28,8 @@ body{
   background-color: black;
   overflow-x: hidden;
   height: auto;
-  width: 100%;
-  margin: 10;
+  width: auto;
+  margin: 40px 40px;
 }
 
 .cursor {
@@ -57,7 +57,7 @@ a, button, label {
 
 .navbar {
   position: fixed;
-  margin-top: 60px;
+  margin-top: 30px;
   width: 80svw; /*ajustar de acordo com width*/
   height: 110px;
   padding: 20px 30px;
@@ -103,12 +103,15 @@ a, button, label {
   height: 4px;
 }
 .navbar .dropdown {
+  display: flex;
   position:relative;
+  width: fit-content;
   z-index: 30;
 }
 
 .dropdown a.link{
   text-align: center;
+  padding: 0;
 }
 
 .navbar .dropdown-content {
@@ -181,6 +184,7 @@ button {
 ul {
   display: flex;
   gap: 1.2rem;
+  padding: 0;
   list-style: none;
   justify-content: center;
 }
@@ -213,6 +217,8 @@ ul {
 }
 .container{
   display: flex;
+  align-items: center;
+  align-content: center;
   justify-content: center;
   flex-wrap: wrap;
   gap: 20px;
@@ -224,7 +230,7 @@ ul {
   justify-content: center;
   align-items: center;
   justify-content: space-around;
-  height: 100%;
+  height: auto;
   gap: 20px;
   margin: 20px 20px;
 }
@@ -232,7 +238,7 @@ ul {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 40vmax;
+  width: 650px;
   padding: 50px 50px;
   height: auto;
   background-color: rgba(191, 191, 191);
@@ -244,7 +250,7 @@ ul {
   display: flex;
   position: relative;
   flex-direction: inherit;
-  width: 35vmax;
+  width: 550px;
   padding: 50px 50px;
   background: #FF5F1F;
   border-radius: 60px;
@@ -390,8 +396,17 @@ label{
 }
 
 @media (max-width: 450px){
+  .inicio h1{
+    font-size: 3rem;
+  }
+  body {
+    margin: 10px 10px;
+  }
   .dropdown a.link{
     font-size: 13px;
+  }
+  ul{
+    gap: 0.5rem;
   }
   .navbar{
     height: 90px;
@@ -401,7 +416,7 @@ label{
     width: 110px;
   }
   .conteudo{
-    width: 42vmax;
+    width: 45vmax;
     height: fit-content;
     padding: 30px 30px;
   }
@@ -410,7 +425,7 @@ label{
   }
   .corpo{
     padding: 40px 30px;
-    width: 37vmax;
+    width: 40vmax;
   }
   .corpo h1{
       font-size: 12vw;
@@ -426,7 +441,7 @@ label{
     height: 30%;
   }
   .card{
-    width: 350px;
+    width: 40vmax;
     height: 60%;
   }
 }
