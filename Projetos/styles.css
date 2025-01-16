@@ -1,7 +1,41 @@
+/* Add the following font-face declarations */
 @font-face {
-  font-family: "Corporate";
-  src: url('/CorporateS-Regular.otf');
+  font-family: "Apple_Regular";
+  src: url('../Fonts/SF-Pro-Text-Regular.otf');
 }
+@font-face {
+  font-family: "Apple_black";
+  src: url('../Fonts/SF-Pro-Display-Black.otf');
+}
+@font-face {
+  font-family: "Apple_classic";
+  src: url('../Fonts/AppleGaramond-LightItalic.ttf');
+}
+@font-face {
+  font-family: "Apple_bold";
+  src: url('../Fonts/SF-Pro-Display-Bold.otf');
+}
+@font-face {
+  font-family: "Apple_thin";
+  src: url('../Fonts/SF-Pro-Text-Thin.otf');
+}
+@font-face {
+  font-family: "Apple_medium";
+  src: url('../Fonts/SF-Pro-Display-Medium.otf');
+}
+@font-face {
+  font-family: "Apple_light";
+  src: url('../Fonts/SF-Pro-Text-Light.otf');
+}
+@font-face {
+  font-family: "Apple_light_rounded";
+  src: url('../Fonts/SF-Pro-Rounded-Light.otf');
+}
+@font-face {
+  font-family: "Apple_semibold";
+  src: url('../Fonts/SF-Pro-Display-Semibold.otf');
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -20,7 +54,7 @@
 body{
   display: flex;
   flex-direction: column;
-  background-color: black;
+  background-color: #F5F5F7; 
   height: auto;
   width: auto;
   margin: 40px 40px;
@@ -60,7 +94,7 @@ a, button, label {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-family: monospace;
+  font-family: Apple_semibold; /* Change font-family to Apple_semibold */
   z-index: 30;
   background: rgba(172, 170, 170, 0.452);
   border-radius: 80px;
@@ -99,24 +133,35 @@ a, button, label {
   height: 4px;
 }
 .navbar .dropdown {
-  position:relative;
-  z-index: 30;
+  display: flex;
+  position: relative;
+  width: fit-content;
   
 }
 
+.dropdown a.link{
+  text-align: center;
+  padding: 0;
+  font-size: 20px;
+  line-height: 1.1428571429;
+  letter-spacing: .007em;
+  color:#1D1D1F;
+}
+
 .navbar .dropdown-content {
-  background-color: rgb(191, 191, 191);
-  border-radius: 40px;
+  background-color: rgba(172, 170, 170, 0.452);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.37);
+  backdrop-filter: blur(17.5px);
+  border-radius: 50px;
   display: none;
   position: absolute;
-  left: -120px; 
   top: 30px;
   z-index: 30;
   flex-direction: column;
   border: none; 
-  opacity: 0;
   transition: opacity 0.3s ease-in-out;
-  padding: 10px 40px;
+  padding: 20px 40px;
+  font-family: Apple_medium;
   
 }
 
@@ -162,7 +207,6 @@ a, button, label {
   transform: scaleX(1);
 }
 
-/* Remove button borders and apply uniform styles */
 button {
   border: none;
   background: none;
@@ -175,6 +219,7 @@ button {
 ul {
   display: flex;
   gap: 1.2rem;
+  padding: 0;
   list-style: none;
   justify-content: center;
 }
@@ -202,23 +247,19 @@ ul {
   align-content: center;
   padding: 30px 20px;
   flex-wrap: wrap;
-  color: #fff;
-  background-color:rgba(245, 245, 245, 0.784);
-  border-radius: 80px;
-  font-family: monospace;
   margin-top: 200px;
   width: 70%;
   height: auto;
 
 }
 
-.sobre{
+.card{
     display: flex;
     flex-direction: column;
-    color: #fff;
+    color:#1D1D1F;
     background-color: #ff5f1f;
     border-radius: 60px;
-    font-family: monospace;
+    font-family: Apple_semibold; /* Change font-family to Apple_semibold */
     padding: 40px 40px;
     margin: 20px;
     width: 45%;
@@ -227,56 +268,33 @@ ul {
     box-shadow: 0 8px 40px 0 rgba(0, 0, 0, 0.37) ;
     transition: all .5s ease; 
 }
-.sobre2{
-    display: flex;
-    flex-direction: column;
-    color: #fff;
-    background-color: rgba(7, 7, 7, 0.816);
-    border-radius: 60px;
-    font-family: monospace;
-    padding: 40px 70px;
-    width: auto; /* O PROBLEMA*/
-    height: 50%; /* Ajuste de altura */
-    text-align: left;
-    box-shadow: 0 8px 40px 0 rgba(0, 0, 0, 0.37) ;
-    transition: all .5s ease; 
+.card p{
+  font-size: 18px;
+  font-family: Apple_medium;
+  margin-bottom: 0;
 }
-/*animação do card*/
-    
-.sobre:hover, .sobre2:hover {
+
+.card:hover {
   transform: translate3D(0,-1px,0) scale(1.03); /* move up slightly and zoom in */
   box-shadow: 8px 28px 50px rgba(39,44,49,.07), 1px 6px 12px rgba(39,44,49,.04);
   transition: all .4s ease; /* zoom in */
   cursor: pointer;
 }
 
-.sobre2 a.link{
+.card a.link{
   width: auto;
 }
-.sobre a.link{
-  width: auto;
-}
-.sobre a.link::before{
+.card a.link::before{
   height: 4px;
   background: white;
  
 }
-.sobre2 a.link::before{
-  height: 4px;
-  background: white;
 
-}
-.sobre h1 {
+.card h1 {
   font-weight: 700;
   text-wrap: balance;
   margin: 0; /* Remove margem */
   width: auto;
-}
-.sobre2 h1 {
-  font-size: 3vmax; /*Problema*/
-  font-weight: 700;
-  text-wrap: balance;
-  margin: 0; /* Remove margem */
 }
 
 .icon {
@@ -292,7 +310,7 @@ ul {
 }
 
 .icon > i {
-  color: #fff;
+  color:#1D1D1F;
   font-size: 2.5rem;
   transition: all 0.2s;
 }
@@ -304,89 +322,92 @@ ul {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-footer{
+footer {
   margin: 100px 0px;
+  color: #1D1D1F; /* Change color to match navbar dropdown */
 }
-.contato{
+
+.copyright {
+  display: flex;
+  align-items: flex-end;
+  font-size: 20px;
+  font-family: Apple_thin; 
+  color: inherit; /* Use inherited color */
+  justify-content: center;
+}
+
+footer .contato {
   display: flex;
   justify-content: center;
   align-items: center;
+  color: inherit; /* Use inherited color */
 }
 
-label{
-  cursor: pointer;
-}
-
-.label{
+footer .label {
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
-  color: #fff;
-  font-family: monospace;
+  color: inherit; /* Use inherited color */
+  font-family: Apple_light;
   font-size: 22px;
   max-width: fit-content;
-  
 }
 
-.label::before{
+footer .label::before {
   content: "";
   position: absolute;
   width: 100%;
   height: 2px;
-  background: #fff;
+  background: inherit; /* Use inherited color */
   border-radius: 5px;
   transform: scaleX(0);
   transition: all 0.6s ease;
   bottom: 0;
   left: 0;
 }
-.label:hover::before{
+
+footer .label:hover::before {
   transform: scaleX(1);
 }
 
-.label2{
+footer .label2 {
   display: flex;
   position: relative;
   justify-content: center;
   align-items: center;
-  color: white;
+  color: inherit; /* Use inherited color */
   font-family: 'Poppins', sans-serif;
   font-size: 35px;
   font-weight: 700;
   margin: 30px 30px;
-}
-
-.copyright{
-  display: flex;
-  align-items: flex-end;
-  font-size: 20px;
-  font-family: "Corporate";
-  color: white;
-  justify-content: center;
 }
 /* Responsive adjustments */
 @media (max-width: 450px) {
   body {
     margin: 10px 10px;
   }
+  ul{
+    gap: 0.5rem;
+  }
   .dropdown a.link{
-    font-size: 13px;
+    font-size: 15px;
   }
   .navbar{
     height: 90px;
+    padding: 20px 20px;
   }
   .navbar .logo{
-    height: 50px;
-    width: 110px;
+    height: 55px;
+    width: 130px;
   }
   .conteudo {
     flex-direction: column;
     flex-wrap: nowrap;
     margin: 50px 10px;
-    margin-top: 70px;
+    margin-top: 150px;
     width: auto;
-    border-radius: 50px;
+    border-radius: 70px;
     padding: 10px 10px;
     height: auto;
   }
@@ -395,13 +416,12 @@ label{
     margin: 5px 5px;
     padding: 10px 10px;
   }
-  .sobre, .sobre2 {
-    margin-bottom: 10px;
-    border-radius: 40px;
+  .card, .sobre2 {
+    border-radius: 50px;
     width: 35vmax;
   }
-  .sobre h1, .sobre2 h1 {
-    font-size: 30px;
-    width: fit-content;
+  .card h1{
+    font-size: 35px;
+    max-width: 215px;
   }
 }

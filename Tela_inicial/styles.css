@@ -1,10 +1,37 @@
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap");
 
 @font-face {
-  font-family: "Corporate";
-  src: url('/CorporateS-Regular.otf');
+  font-family: "Apple_Regular";
+  src: url('../Fonts/SF-Pro-Text-Regular.otf');
 }
-
+@font-face {
+  font-family: "Apple_black";
+  src: url('../Fonts/SF-Pro-Display-Black.otf');
+}
+@font-face {
+  font-family: "Apple_bold";
+  src: url('../Fonts/SF-Pro-Display-Bold.otf');
+}
+@font-face {
+  font-family: "Apple_thin";
+  src: url('../Fonts/SF-Pro-Text-Thin.otf');
+}
+@font-face {
+  font-family: "Apple_medium";
+  src: url('../Fonts/SF-Pro-Display-Medium.otf');
+}
+@font-face {
+  font-family: "Apple_light";
+  src: url('../Fonts/SF-Pro-Text-Light.otf');
+}
+@font-face {
+  font-family: "Apple_light_rounded";
+  src: url('../Fonts/SF-Pro-Rounded-Light.otf');
+}
+@font-face {
+  font-family: "Apple_semibold";
+  src: url('../Fonts/SF-Pro-Display-Semibold.otf');
+}
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -25,7 +52,7 @@ body{
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: black;
+  background-color:#F5F5F7;
   overflow-x: hidden;
   height: auto;
   width: auto;
@@ -64,7 +91,7 @@ a, button, label {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-family: monospace;
+  font-family: Apple_semibold;
   z-index: 30;
   background: rgba(172, 170, 170, 0.452);
   border-radius: 80px;
@@ -88,7 +115,7 @@ a, button, label {
   padding: 0;
   font-weight: 700;
   color: white;
-  font-family: 'Poppins', sans-serif;
+  font-family: Apple_semibold;
 }
 .navbar .logo a {
   transition: 0.35s ease;
@@ -106,27 +133,31 @@ a, button, label {
   display: flex;
   position:relative;
   width: fit-content;
-  z-index: 30;
 }
 
 .dropdown a.link{
   text-align: center;
   padding: 0;
+  font-size: 20px;
+  line-height: 1.1428571429;
+  letter-spacing: .007em;
+  color:#1D1D1F;
 }
 
 .navbar .dropdown-content {
-  background-color: rgb(191, 191, 191);
-  border-radius: 40px;
+  background-color: rgba(172, 170, 170, 0.452);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.37);
+  backdrop-filter: blur(17.5px);
+  border-radius: 50px;
   display: none;
   position: absolute;
-  left: -120px; 
   top: 30px;
   z-index: 30;
   flex-direction: column;
   border: none; 
-  opacity: 0;
   transition: opacity 0.3s ease-in-out;
-  padding: 10px 40px;
+  padding: 20px 40px;
+  font-family: Apple_medium;
   
 }
 
@@ -181,7 +212,7 @@ button {
   padding: 0;
 }
 
-ul {
+.navbar ul {
   display: flex;
   gap: 1.2rem;
   padding: 0;
@@ -189,29 +220,21 @@ ul {
   justify-content: center;
 }
 
-.wrapper {
-  padding: 0; 
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  height: auto; 
-  bottom: 60px; 
-  width: 100%; 
-}
 
 .inicio {
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  color:#fff;
-  font-family: monospace;
+  color:#1D1D1F;
+  font-weight: 700;
+  font-family: Apple_semibold;
   
 }
 
 .inicio h1 {
-  font-size: 4rem;
-  font-weight: 500;
+  font-size: 6rem;
+  font-weight: 700;
   text-align: center;
   text-wrap: balance;
 }
@@ -238,10 +261,10 @@ ul {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 650px;
+  width: 700px;
   padding: 50px 50px;
   height: auto;
-  background-color: rgba(191, 191, 191);
+  background-color: rgb(34, 31, 28);
   border-radius: 80px;
 
 }
@@ -250,7 +273,7 @@ ul {
   display: flex;
   position: relative;
   flex-direction: inherit;
-  width: 550px;
+  width: 600px;
   padding: 50px 50px;
   background: #FF5F1F;
   border-radius: 60px;
@@ -268,7 +291,7 @@ ul {
 .corpo h1{
   text-align: start;
   margin-top: 10px;
-  font-family: monospace;
+  font-family: Apple_black;
   font-size: 70px;
   font-weight: 700;
   color: rgb(252, 248, 248);
@@ -285,7 +308,7 @@ ul {
 
 .corpo p{
   text-align: justify;
-  font-family: 'Corporate';
+  font-family: Apple_Thin;
   font-size: 20px;
   line-height: 40px;
   word-spacing: 2px;
@@ -296,17 +319,69 @@ ul {
 .card{
   display: flex;
   flex-direction: column;
-  align-items: center;
   width: 600px;
-  height: 400px;
-  padding: 20px 20px;
+  height: 460px;
+  padding: 50px 50px;
   background: #FF5F1F;
   border-radius: 60px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.37);
   backdrop-filter: blur(17.5px);
   transition: all .7s ease;
 }
+.card h1{
+  text-align: start;
+  margin-top: 10px;
+  font-family: Apple_black;
+  font-size: 50px;
+  font-weight: 700;
+  color: white;
+  text-wrap: balance;
+}
+.card i{
+  font-size: 25px;
+  color: white;
+}
 
+.scrollable_card {
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  height: 300px;
+  padding: 30px;
+  margin: 0;
+  background: rgb(34, 31, 28);
+  border-radius: 40px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.37);
+  backdrop-filter: blur(17.5px);
+}
+.scrollable_card li{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-family: Apple_semibold;
+  font-weight: 600;
+  line-height: 1.1428571429;
+  letter-spacing: .007em;
+  color: white;
+  font-size: 30px;
+  line-height: 20px;
+  word-spacing: 2px;
+  gap: 1.5rem;
+}
+
+.sub_card{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-family: Apple_Regular;
+  color:white;
+  font-size: 30px;
+  line-height: 40px;
+  word-spacing: 2px;
+  gap: 1.5rem;
+
+}
 .icon {
   text-decoration: none;
   width: 5.625rem;
@@ -320,7 +395,7 @@ ul {
 }
 
 .icon > i {
-  color: #fff;
+  color:#1D1D1F;
   font-size: 2.5rem;
   transition: all 0.2s;
 }
@@ -341,8 +416,8 @@ footer{
   display: flex;
   align-items: flex-end;
   font-size: 20px;
-  font-family: "Corporate";
-  color: white;
+  font-family: "Apple_thin";
+  color:#1D1D1F;
 
 }
 .contato{
@@ -360,10 +435,11 @@ label{
   justify-content: center;
   align-items: center;
   position: relative;
-  color: #fff;
-  font-family: monospace;
-  font-size: 22px;
+  color:#1D1D1F;
+  font-family: Apple_light;
+  font-size: 25px;
   max-width: fit-content;
+  margin: 20px;
   
 }
 
@@ -372,7 +448,7 @@ label{
   position: absolute;
   width: 100%;
   height: 2px;
-  background: #fff;
+  background: #1D1D1F;
   border-radius: 5px;
   transform: scaleX(0);
   transition: all 0.6s ease;
@@ -381,14 +457,24 @@ label{
 }
 .label:hover::before{
   transform: scaleX(1);
-}
 
+}
+.wrapper {
+  padding: 0; 
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  height: auto; 
+  bottom: 60px; 
+  width: 100%; 
+  margin-top: 30px;
+}
 .label2{
   display: flex;
   position: relative;
   justify-content: center;
   align-items: center;
-  color: white;
+  color: #1D1D1F;
   font-family: 'Poppins', sans-serif;
   font-size: 35px;
   font-weight: 700;
@@ -403,17 +489,18 @@ label{
     margin: 10px 10px;
   }
   .dropdown a.link{
-    font-size: 13px;
+    font-size: 15px;
   }
-  ul{
+  .navbar ul{
     gap: 0.5rem;
   }
   .navbar{
     height: 90px;
+    padding: 20px 20px;
   }
   .navbar .logo{
-    height: 50px;
-    width: 110px;
+    height: 55px;
+    width: 130px;
   }
   .conteudo{
     width: 45vmax;
@@ -435,6 +522,7 @@ label{
   }
   .corpo p{
       font-size: 17px;
+      word-spacing: normal;
   }
   .conteudo_cards{
     justify-content: start;
@@ -442,6 +530,17 @@ label{
   }
   .card{
     width: 40vmax;
+    padding: 30px;
     height: 60%;
+  }
+  .card h1{
+    font-size: 35px;
+    margin-bottom: 10px;
+    margin-top: 0px;
+    text-align: center;
+  }
+  .scrollable_card li{
+    font-size: 25px;
+    font-family: Apple_thin;
   }
 }
